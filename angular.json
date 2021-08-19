@@ -36,6 +36,14 @@
             "scripts": []
           },
           "configurations": {
+            "hmr": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.hmr.ts"
+                }
+              ]
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -71,6 +79,10 @@
             "browserTarget": "test:build"
           },
           "configurations": {
+            "hmr": {
+              "hmr": true,
+              "browserTarget": "test:build:hmr"
+            },
             "production": {
               "browserTarget": "test:build:production"
             }
