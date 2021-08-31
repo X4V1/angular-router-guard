@@ -3,6 +3,7 @@ import {CoreComponent} from './core.component';
 import {CoreRoutingModule} from './core-routing.module';
 import {EffectsModule} from '@ngrx/effects';
 import {CoreEffects} from './core.effects';
+import {RejectionGuard} from './rejection-guard';
 
 @NgModule({
   imports: [
@@ -11,7 +12,7 @@ import {CoreEffects} from './core.effects';
   ],
   exports: [],
   declarations: [CoreComponent],
-  providers: [],
+  providers: [RejectionGuard],
 })
 export class CoreModule {
 
